@@ -1,0 +1,7 @@
+
+/*Logo snýr sér í hring þegar það er farið með músina yfir það*/
+svg:hover {
+   transform: rotate(360deg);
+   transition-duration: 1s;
+}
+
