@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+<link rel="stylesheet" href="style.css">
+<!--Býr til kassa með stafnum A í honum -->
+<div>
+  <svg width="600" height="280">
+    <rect x="50" y="20" rx="20" ry="20" width="150" height="150"
+    style="fill:red;stroke:black;stroke-width:5;opacity:0.5" />
+    <text fill="#ffffff" font-size="100" font-family="Arial" x="90" y="125">A</text>
+    <!-- https://stackoverflow.com/questions/6999281/can-text-be-added-to-an-svg-path> -->
+    <!-- Notaði þetta hér -->
+     <defs>
+      <path id="MyPath"
+            d="M 250 50 
+               C 200 100 300   0 400 100
+               C 500 200 600 300 700 200
+               C 800 100 900 100 900 100" />
+    </defs>
+
+    <use xlink:href="#MyPath" fill="none" stroke="transparent"  />
+    <text font-family="Verdana" font-size="80" fill="black" >
+      <textPath xlink:href="#MyPath">
+        xel Máni
+      </textPath>
+    </text>
+  </svg>
+  <button id="btn">Click Me For Cool Animation</button>
+</div>
+
+
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.js" integrity="sha256-kRbW+SRRXPogeps8ZQcw2PooWEDPIjVQmN1ocWVQHRY=" crossorigin="anonymous"></script>
+<script src="main.js"></script>
+</html>
